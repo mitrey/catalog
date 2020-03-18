@@ -1,0 +1,14 @@
+.countries-list {
+    display: flex;
+    justify-content: space-around;
+}
+.countries-list__item {
+    flex: 1;
+    max-width: 320px;
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 6px #ccc;
+}

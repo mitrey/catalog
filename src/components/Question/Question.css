@@ -1,0 +1,19 @@
+.question {
+}
+.question:hover .question__title {
+    background: #eee;
+    cursor: pointer;
+}
+.question--filled {
+    background-color: #eee;
+}
+.question__title {
+    border-bottom: 1px solid #ccc;
+    padding: 14px 24px;
+}
+.question__list {
+    display: none;
+}
+.question--opened .question__list {
+    display: block;
+}
