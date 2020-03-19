@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './CommentForm.css';
 
-const CommentForm = ({ onSubmit }) => {
+const CommentForm = ({ onSubmit, loading }) => {
     const [comment, setComment] = useState('');
 
     const canSend = comment && comment.length > 10;
@@ -21,11 +21,11 @@ const CommentForm = ({ onSubmit }) => {
                 onChange={e => setComment(e.target.value)}
             />
             <button
-                disabled={!canSend}
+                disabled={!canSend || loading}
                 className="comment-button"
                 onClick={() => handleSubmit(comment)}
             >
-                Send
+                {loading ? 'Please wait' : 'Send'}
             </button>
         </div>
     );

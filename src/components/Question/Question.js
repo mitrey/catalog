@@ -7,7 +7,14 @@ import Answer from '../Answer';
 
 import './Question.css';
 
-const Question = ({ answers, title = 'No title', text, even, onAnswerAdd }) => {
+const Question = ({
+    loading,
+    answers,
+    title = 'No title',
+    text,
+    even,
+    onAnswerAdd,
+}) => {
     const [opened, setOpened] = useState(false);
     const { isLoggedIn } = useAuth();
 
@@ -38,9 +45,12 @@ const Question = ({ answers, title = 'No title', text, even, onAnswerAdd }) => {
                 )}
 
                 {isLoggedIn && (
-                  <div className="question__answer-form">
-                      <CommentForm onSubmit={handleSubmitAnswer} />
-                  </div>
+                    <div className="question__answer-form">
+                        <CommentForm
+                            loading={loading}
+                            onSubmit={handleSubmitAnswer}
+                        />
+                    </div>
                 )}
             </div>
         </div>

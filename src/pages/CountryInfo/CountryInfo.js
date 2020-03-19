@@ -21,6 +21,7 @@ const prepareQuestions = res => {
 
 const CountryInfo = ({ isLoading, country, location, match: { params } }) => {
     const { user } = useAuth();
+    const [loading, setLoading] = useState(false);
     const id = params.countryId;
     const [questions, setQuestions] = useState([]);
     const [query, setQuery] = useState('');
@@ -35,12 +36,22 @@ const CountryInfo = ({ isLoading, country, location, match: { params } }) => {
         : questions;
 
     const handleQuestionSend = data => {
-        database.ref(`/countries/${id}/questions`).push(data);
+        setLoading(true);
+        database
+            .ref(`/countries/${id}/questions`)
+            .push(data)
+            .then(() => {
+                setLoading(false);
+            })
+            .catch(e => setLoading(false));
     };
     const handleAnswerSend = (questionId, answerText) => {
+        setLoading(true);
         database
             .ref(`/countries/${id}/questions/${questionId}/answers`)
-            .push({ text: answerText, author: user, date: Date.now() });
+            .push({ text: answerText, author: user, date: Date.now() })
+            .then(() => setLoading(false))
+            .catch(e => setLoading(false));
     };
 
     useEffect(() => {
@@ -90,6 +101,7 @@ const CountryInfo = ({ isLoading, country, location, match: { params } }) => {
                 isLoggedIn && (
                     <div className="country__add-question">
                         <Form
+                            loading={loading}
                             title="Add your question:"
                             fields={[
                                 {
@@ -118,6 +130,7 @@ const CountryInfo = ({ isLoading, country, location, match: { params } }) => {
                             {filteredQuestion.length ? (
                                 filteredQuestion.map((q, idx) => (
                                     <Question
+                                        loading={loading}
                                         even={idx % 2 !== 0}
                                         key={q.id}
                                         {...q}

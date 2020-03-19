@@ -3,12 +3,26 @@ import Input from '../Input';
 import Button from '../Button';
 import './Form.css';
 
-const Form = ({ onSubmit, fields, title, inputClassName, buttonClassName }) => {
+const Form = ({
+    loading,
+    onSubmit,
+    fields,
+    title,
+    inputClassName,
+    buttonClassName,
+}) => {
     const [data, setData] = useState({});
 
     const canSend =
         Object.values(data).length === fields.length &&
         Object.values(data).filter(val => !val || val.length < 3).length === 0;
+
+    const handleSubmit = () => {
+        if (canSend) {
+            onSubmit(data);
+            setData({});
+        }
+    };
 
     return (
         <div className="form">
@@ -28,10 +42,10 @@ const Form = ({ onSubmit, fields, title, inputClassName, buttonClassName }) => {
                 ))}
                 <div className="form__button">
                     <Button
-                        disabled={!canSend}
+                        disabled={!canSend || loading}
                         className={buttonClassName}
-                        onClick={() => canSend && onSubmit(data)}
-                        label="Send"
+                        onClick={handleSubmit}
+                        label={loading ? 'Please wait' : 'Send'}
                     />
                 </div>
             </div>

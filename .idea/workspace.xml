@@ -5,53 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e82cb825-4631-498c-a027-4e396f0c45d5" name="Default Changelist" comment="6">
-      <change afterPath="$PROJECT_DIR$/src/components/AddCountry/AddCountry.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Answer/Answer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Answer/Answer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Answer/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/CommentForm/CommentForm.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/CommentForm/CommentForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/CommentForm/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/icons/back.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/icons/corona.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/icons/icon-search.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/operations.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/types.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/templates/BaseTemplate/BaseTemplate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/templates/BaseTemplate/BaseTemplate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/templates/BaseTemplate/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/auth/AuthContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/AuthContext.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AddQuestionForm/AddQuestionForm.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Form/Form.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AddQuestionForm/AddQuestionForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Form/Form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AddQuestionForm/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Form/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CountriesList/CountriesList.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CountriesList/CountriesList.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CountriesList/CountriesList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CountriesList/CountriesList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Input/Input.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Input/Input.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Input/Input.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Input/Input.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Loader/Loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Loader/Loader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Question/Question.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Question/Question.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CommentForm/CommentForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CommentForm/CommentForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Form/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Form/Form.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Question/Question.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Question/Question.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Search/Search.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/Search.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Search/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/Search.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Title/Title.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Title/Title.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Title/Title.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Title/Title.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/CountryInfo/CountryInfo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CountryInfo/CountryInfo.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/CountryInfo/CountryInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CountryInfo/CountryInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -67,8 +25,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/CountryInfo/CountryInfo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="91" column="27" selection-start-line="91" selection-start-column="27" selection-end-line="91" selection-end-column="27" />
+            <state relative-caret-position="-900">
+              <caret line="45" column="43" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
               <folding>
                 <element signature="e#0#51#0" expanded="true" />
               </folding>
@@ -76,29 +34,38 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Form/Form.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+            <state relative-caret-position="358">
+              <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Form/Form.css">
+        <entry file="file://$PROJECT_DIR$/src/components/CommentForm/CommentForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="661">
-              <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+            <state relative-caret-position="79">
+              <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/auth/AuthContext.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Question/Question.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="34" column="16" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="36" />
+            <state relative-caret-position="1389">
+              <caret line="48" column="27" lean-forward="true" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -107,7 +74,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>firebasee</find>
       <find>handleQuestionSend</find>
       <find>onSubmit</find>
       <find>fireba</find>
@@ -137,6 +103,7 @@
       <find>__question</find>
       <find>add-q</find>
       <find>console</find>
+      <find>&lt;Comm</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -188,17 +155,17 @@
         <option value="$PROJECT_DIR$/src/components/Question/Question.css" />
         <option value="$PROJECT_DIR$/src/components/Answer/Answer.js" />
         <option value="$PROJECT_DIR$/src/components/Answer/Answer.css" />
-        <option value="$PROJECT_DIR$/src/components/Question/Question.js" />
         <option value="$PROJECT_DIR$/src/templates/BaseTemplate/BaseTemplate.js" />
         <option value="$PROJECT_DIR$/src/templates/BaseTemplate/BaseTemplate.css" />
         <option value="$PROJECT_DIR$/src/pages/CountryInfo/CountryInfo.css" />
         <option value="$PROJECT_DIR$/src/components/Button/Button.js" />
         <option value="$PROJECT_DIR$/src/components/Button/Button.css" />
-        <option value="$PROJECT_DIR$/src/components/Form/Form.js" />
-        <option value="$PROJECT_DIR$/src/components/CommentForm/CommentForm.js" />
         <option value="$PROJECT_DIR$/src/components/CommentForm/CommentForm.css" />
         <option value="$PROJECT_DIR$/src/components/Form/Form.css" />
+        <option value="$PROJECT_DIR$/src/components/CommentForm/CommentForm.js" />
+        <option value="$PROJECT_DIR$/src/components/Question/Question.js" />
         <option value="$PROJECT_DIR$/src/pages/CountryInfo/CountryInfo.js" />
+        <option value="$PROJECT_DIR$/src/components/Form/Form.js" />
       </list>
     </option>
   </component>
@@ -266,15 +233,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1584423219542</updated>
-      <workItem from="1584423221130" duration="32899000" />
+      <workItem from="1584423221130" duration="33405000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32899000" />
+    <option name="totallyTimeSpent" value="33405000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="npm" side_tool="true" />
       <window_info id="Favorites" side_tool="true" />
@@ -605,16 +573,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/CommentForm/CommentForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Answer/Answer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="403">
@@ -649,33 +607,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Question/Question.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="41" column="30" lean-forward="true" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/CountryInfo/CountryInfo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="91" column="27" selection-start-line="91" selection-start-column="27" selection-end-line="91" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Form/Form.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Form/Form.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="661">
@@ -687,6 +618,46 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="34" column="16" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Question/Question.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1389">
+          <caret line="48" column="27" lean-forward="true" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/CountryInfo/CountryInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-900">
+          <caret line="45" column="43" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/CommentForm/CommentForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Form/Form.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
