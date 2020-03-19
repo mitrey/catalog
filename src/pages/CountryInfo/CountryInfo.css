@@ -11,6 +11,9 @@
     width: 80%;
     max-width: 600px;
 }
+.country__info {
+    margin-bottom: 36px;
+}
 .country__questions {
     color: #333;
 }
@@ -18,6 +21,8 @@
     padding: 24px;
     background-color: #edf0f7;
     color: #333;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
 }
 .country__empty {
     text-align: center;

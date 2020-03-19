@@ -12,6 +12,7 @@ import './CountryInfo.css';
 import { Link } from 'react-router-dom';
 import Flag from 'react-world-flags';
 import BaseTemplate from '../../templates/BaseTemplate';
+import EmergencyInfoBlock from '../../components/EmergencyInfoBlock/EmergencyInfoBlock';
 
 const prepareQuestions = res => {
     return Object.keys(res).map(id => {
@@ -21,6 +22,7 @@ const prepareQuestions = res => {
 
 const CountryInfo = ({ isLoading, country, location, match: { params } }) => {
     const { user } = useAuth();
+    const [openedQuestionId, setOpenedQuestionId] = useState(null);
     const [loading, setLoading] = useState(false);
     const id = params.countryId;
     const [questions, setQuestions] = useState([]);
@@ -124,12 +126,20 @@ const CountryInfo = ({ isLoading, country, location, match: { params } }) => {
                 ) : (
                     <>
                         <div className="country__questions">
+                            <div className="country__info">
+                                <EmergencyInfoBlock {...country.emergency} />
+                            </div>
+
                             <h3 className="country__list-title">
                                 Questions List
                             </h3>
                             {filteredQuestion.length ? (
                                 filteredQuestion.map((q, idx) => (
                                     <Question
+                                        isOpened={q.id === openedQuestionId}
+                                        onClick={() =>
+                                            setOpenedQuestionId(q.id)
+                                        }
                                         loading={loading}
                                         even={idx % 2 !== 0}
                                         key={q.id}

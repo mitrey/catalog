@@ -10,7 +10,11 @@ const Provider = ({ children }) => {
     useEffect(() => {
         firebase.auth().onAuthStateChanged(data => {
             if (data) {
-                setUser({ email: data.email, name: data.displayName });
+                setUser({
+                    email: data.email,
+                    name: data.displayName,
+                    avatar: data.photoURL,
+                });
             } else {
                 setUser(null);
             }

@@ -1,27 +1,29 @@
 .question {
-    padding: 16px 0;
     color: #333;
     border-bottom: 1px solid #ccc;
 }
-.question:hover {
-    background: #eee;
-}
-.question--filled {
-    background-color: rgba(0,0,0,0.03);
+.question--opened {
+    background-color: rgba(0, 0, 0, 0.03);
 }
 .question__title {
-    padding: 0 24px;
+    padding: 16px 24px;
     font-weight: 600;
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
-.question__list {
-    display: none;
+.question__title:hover {
+    background: #eee;
 }
 .question--opened .question__list {
     display: block;
 }
 .question__list {
-    padding: 14px 24px 36px;
+    display: none;
+    padding: 0 24px 36px;
+}
+.question__avatar {
+    margin-right: 12px;
 }
 
 .answer_input {

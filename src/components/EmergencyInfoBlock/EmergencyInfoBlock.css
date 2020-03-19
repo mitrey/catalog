@@ -1,0 +1,7 @@
+.emergency-info-block {
+    display: flex;
+    flex-direction: column;
+}
+.emergency-info-block .title {
+    margin-top: 0;
+}

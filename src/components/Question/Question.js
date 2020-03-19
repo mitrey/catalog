@@ -6,28 +6,33 @@ import useAuth from '../../auth/useAuth';
 import Answer from '../Answer';
 
 import './Question.css';
+import Avatar from '../Avatar';
 
 const Question = ({
     loading,
     answers,
     title = 'No title',
     text,
-    even,
     onAnswerAdd,
+    isOpened,
+    onClick,
 }) => {
-    const [opened, setOpened] = useState(false);
-    const { isLoggedIn } = useAuth();
+    const { isLoggedIn, user } = useAuth();
 
     const handleSubmitAnswer = data => onAnswerAdd(data);
 
     return (
         <div
             className={classNames('question', {
-                'question--opened': opened,
-                'question--filled': even,
+                'question--opened': isOpened,
             })}
         >
-            <div className="question__title" onClick={() => setOpened(!opened)}>
+            <div className="question__title" onClick={onClick}>
+                <Avatar
+                    size={40}
+                    url={user.avatar}
+                    className="question__avatar"
+                />
                 {title}
             </div>
             <div className="question__list">

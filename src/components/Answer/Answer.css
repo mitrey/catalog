@@ -1,13 +1,18 @@
 .answer {
-    padding: 12px 0;
-    border-top: 1px solid #ccc;
+    padding: 12px;
+    background-color: #fff;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    font-size: 12px;
 }
 .answer-author {
-    margin-bottom: 8px;
+    display: flex;
+    margin-bottom: 12px;
     font-weight: 600;
 }
 .answer-date {
     opacity: 0.5;
-    margin-bottom: 12px;
-    font-size: 12px;
+}
+.answer-author-avatar {
+    margin-right: 12px;
 }
