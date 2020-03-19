@@ -3,3 +3,6 @@
 .title--centered {
     text-align: center;
 }
+.title--uppercase {
+    text-transform: uppercase;
+}

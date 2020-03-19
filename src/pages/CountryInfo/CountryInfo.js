@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from 'react';
+import { connect } from 'react-redux';
 import Question from '../../components/Question';
 import Search from '../../components/Search';
-import AddQuestionForm from '../../components/AddQuestionForm';
+import Form from '../../components/Form';
 import { database } from '../../firebase';
 import Loader from '../../components/Loader';
 import useAuth from '../../auth/useAuth';
 import Title from '../../components/Title';
-
+import { ReactComponent as BackIcon } from '../../icons/back.svg';
 import './CountryInfo.css';
+import { Link } from 'react-router-dom';
+import Flag from 'react-world-flags';
+import BaseTemplate from '../../templates/BaseTemplate';
 
 const prepareQuestions = res => {
     return Object.keys(res).map(id => {
@@ -15,11 +19,11 @@ const prepareQuestions = res => {
     });
 };
 
-const CountryInfo = ({ match: { params } }) => {
+const CountryInfo = ({ isLoading, country, location, match: { params } }) => {
+    const { user } = useAuth();
     const id = params.countryId;
     const [questions, setQuestions] = useState([]);
     const [query, setQuery] = useState('');
-    const [loading, setLoading] = useState(true);
     const { isLoggedIn } = useAuth();
 
     const filteredQuestion = query
@@ -30,13 +34,17 @@ const CountryInfo = ({ match: { params } }) => {
           )
         : questions;
 
-    const handleQuestionSend = (title, text) => {
-        database.ref(`/countries/${id}/questions`).push({ title, text });
+    const handleQuestionSend = data => {
+        database.ref(`/countries/${id}/questions`).push(data);
+    };
+    const handleAnswerSend = (questionId, answerText) => {
+        database
+            .ref(`/countries/${id}/questions/${questionId}/answers`)
+            .push({ text: answerText, author: user, date: Date.now() });
     };
 
     useEffect(() => {
         database.ref(`/countries/${id}/questions`).on('value', snapshot => {
-            setLoading(false);
             const val = snapshot.val();
             if (val) {
                 setQuestions(prepareQuestions(snapshot.val()));
@@ -44,28 +52,99 @@ const CountryInfo = ({ match: { params } }) => {
         });
     }, [id]);
 
-    return (
-        <div>
-            <div className="country__tools">
-                <div className="country__tools-content">
-                    <Title text={id} />
-                    <Search query={query} onSearch={query => setQuery(query)} />
-                    {isLoggedIn && (
-                        <div>
-                            <AddQuestionForm onSubmit={handleQuestionSend} />
-                        </div>
-                    )}
-                </div>
-            </div>
+    if (!country) return <div>Error. No such country</div>;
 
-            {loading && <Loader />}
-            <div className="country__questions">
-                {filteredQuestion.map((q, idx) => (
-                    <Question even={idx % 2 !== 0} key={q.id} {...q} />
-                ))}
-            </div>
-        </div>
+    return (
+        <BaseTemplate
+            header={
+                <div className="country__tools">
+                    <div className="country__tools-content">
+                        <div className="country__back">
+                            {location.pathname !== '/' && (
+                                <Link to="/">
+                                    <span className="back-icon">
+                                        <BackIcon />
+                                    </span>
+                                    Back to countries list
+                                </Link>
+                            )}
+                        </div>
+                        <div className="country__name">
+                            {country.countryCode && (
+                                <Flag
+                                    code={country.countryCode}
+                                    height={24}
+                                    className="country__name-flag"
+                                />
+                            )}
+                            <Title text={country.name} color="#56bdd2" />
+                        </div>
+                        <Search
+                            query={query}
+                            onSearch={query => setQuery(query)}
+                        />
+                    </div>
+                </div>
+            }
+            toolsLine={
+                isLoggedIn && (
+                    <div className="country__add-question">
+                        <Form
+                            title="Add your question:"
+                            fields={[
+                                {
+                                    name: 'title',
+                                    placeholder: 'Title',
+                                },
+                                {
+                                    name: 'text',
+                                    placeholder: 'Question',
+                                },
+                            ]}
+                            onSubmit={handleQuestionSend}
+                        />
+                    </div>
+                )
+            }
+            content={
+                isLoading ? (
+                    <Loader />
+                ) : (
+                    <>
+                        <div className="country__questions">
+                            <h3 className="country__list-title">
+                                Questions List
+                            </h3>
+                            {filteredQuestion.length ? (
+                                filteredQuestion.map((q, idx) => (
+                                    <Question
+                                        even={idx % 2 !== 0}
+                                        key={q.id}
+                                        {...q}
+                                        onAnswerAdd={v =>
+                                            handleAnswerSend(q.id, v)
+                                        }
+                                    />
+                                ))
+                            ) : (
+                                <div className="country__empty">
+                                    No questions to display.
+                                </div>
+                            )}
+                        </div>
+                    </>
+                )
+            }
+        />
     );
 };
 
-export default CountryInfo;
+const mapStateToProps = (state, ownProps) => {
+    const id = ownProps.match.params.countryId;
+    return {
+        isLoading: state.isLoading,
+        country: state.countries[id],
+    };
+};
+
+export default connect(mapStateToProps)(CountryInfo);

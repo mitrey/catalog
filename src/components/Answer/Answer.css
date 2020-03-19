@@ -1,0 +1,13 @@
+.answer {
+    padding: 12px 0;
+    border-top: 1px solid #ccc;
+}
+.answer-author {
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+.answer-date {
+    opacity: 0.5;
+    margin-bottom: 12px;
+    font-size: 12px;
+}

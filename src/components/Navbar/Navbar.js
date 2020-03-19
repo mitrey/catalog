@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter, Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import './Navbar.css';
 import useAuth from '../../auth/useAuth';
 
@@ -8,36 +8,27 @@ const Navbar = ({ location }) => {
 
     return (
         <div className="navBar">
-            {location.pathname !== '/' && (
-                <Link to="/">
-                    <div>Back to countries list</div>
-                </Link>
-            )}
-
             {loginInProgress ? (
                 'Loading'
             ) : (
-                <>
+                <div className="auth">
                     {isLoggedIn && (
-                        <div className="user">
+                        <>
                             <span className="auth__user">{user.name}</span>
-                            <button
-                                className="auth__button"
+                            <span
+                                className="auth__link"
                                 onClick={() => logout()}
                             >
                                 Logout
-                            </button>
-                        </div>
+                            </span>
+                        </>
                     )}
                     {!isLoggedIn && (
-                        <button
-                            className="auth__button"
-                            onClick={() => login()}
-                        >
-                            Sign In
-                        </button>
+                        <span className="auth__link" onClick={() => login()}>
+                            Sign In to ask
+                        </span>
                     )}
-                </>
+                </div>
             )}
         </div>
     );

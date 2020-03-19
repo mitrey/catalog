@@ -1,0 +1,30 @@
+.form__fields {
+    display: flex;
+}
+.form__field {
+    margin: 0 4px;
+}
+.form__field:first-of-type {
+    margin-left: 0;
+}
+.form__button {
+    margin-left: 4px;
+}
+.form__title {
+    margin: 0 0 24px;
+}
+
+@media only screen and (max-width: 600px) {
+    .form__fields {
+        flex-direction: column;
+    }
+    .form__field {
+        margin: 4px 0;
+    }
+    .form__button {
+        margin: 4px 0;
+    }
+    .form__button button {
+        width: 100%;
+    }
+}

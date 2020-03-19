@@ -1,19 +1,40 @@
 .question {
+    padding: 16px 0;
+    color: #333;
+    border-bottom: 1px solid #ccc;
 }
-.question:hover .question__title {
+.question:hover {
     background: #eee;
-    cursor: pointer;
 }
 .question--filled {
-    background-color: #eee;
+    background-color: rgba(0,0,0,0.03);
 }
 .question__title {
-    border-bottom: 1px solid #ccc;
-    padding: 14px 24px;
+    padding: 0 24px;
+    font-weight: 600;
+    cursor: pointer;
 }
 .question__list {
     display: none;
 }
 .question--opened .question__list {
     display: block;
+}
+.question__list {
+    padding: 14px 24px 36px;
+}
+
+.answer_input {
+    border: 2px solid #333;
+}
+.answer_button {
+    background-color: #333;
+}
+.question__answer-form {
+    margin-top: 24px;
+}
+
+.question__empty {
+    text-align: center;
+    opacity: 0.5;
 }

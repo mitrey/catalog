@@ -50,6 +50,7 @@ const Provider = ({ children }) => {
                 logout,
                 user,
                 loginInProgress: loading,
+                isAdmin: user && user.email === 'yarmakdg@gmail.com',
             }}
         >
             {children}
