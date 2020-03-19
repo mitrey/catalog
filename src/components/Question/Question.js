@@ -16,8 +16,9 @@ const Question = ({
     onAnswerAdd,
     isOpened,
     onClick,
+    author
 }) => {
-    const { isLoggedIn, user } = useAuth();
+    const { isLoggedIn } = useAuth();
 
     const handleSubmitAnswer = data => onAnswerAdd(data);
 
@@ -30,7 +31,7 @@ const Question = ({
             <div className="question__title" onClick={onClick}>
                 <Avatar
                     size={40}
-                    url={user.avatar}
+                    url={author.avatar}
                     className="question__avatar"
                 />
                 {title}

@@ -41,7 +41,7 @@ const CountryInfo = ({ isLoading, country, location, match: { params } }) => {
         setLoading(true);
         database
             .ref(`/countries/${id}/questions`)
-            .push(data)
+            .push({ ...data, author: user, date: Date.now() })
             .then(() => {
                 setLoading(false);
             })
