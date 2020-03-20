@@ -30,13 +30,10 @@ const Provider = ({ children }) => {
                 return firebase
                     .auth()
                     .signInWithPopup(new firebase.auth.GoogleAuthProvider())
-                    .then(res => {
+                    .then(() => {
                         setLoading(false);
                     })
-                    .catch(e => setLoading(false));
-            })
-            .catch(e => {
-                console.log('e', e);
+                    .catch(() => setLoading(false));
             });
     };
     const logout = () => {

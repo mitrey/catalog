@@ -13,6 +13,8 @@ import { Link } from 'react-router-dom';
 import Flag from 'react-world-flags';
 import BaseTemplate from '../../templates/BaseTemplate';
 import EmergencyInfoBlock from '../../components/EmergencyInfoBlock/EmergencyInfoBlock';
+import { addQuestion, deleteQuestion } from '../../api/questions';
+import { addAnswer, deleteAnswer } from '../../api/answers';
 
 const prepareQuestions = res => {
     return Object.keys(res).map(id => {
@@ -21,7 +23,7 @@ const prepareQuestions = res => {
 };
 
 const CountryInfo = ({ isLoading, country, location, match: { params } }) => {
-    const { user } = useAuth();
+    const { user, isAdmin } = useAuth();
     const [openedQuestionId, setOpenedQuestionId] = useState(null);
     const [loading, setLoading] = useState(false);
     const id = params.countryId;
@@ -39,21 +41,29 @@ const CountryInfo = ({ isLoading, country, location, match: { params } }) => {
 
     const handleQuestionSend = data => {
         setLoading(true);
-        database
-            .ref(`/countries/${id}/questions`)
-            .push({ ...data, author: user, date: Date.now() })
+        addQuestion(id, { ...data, author: user, date: Date.now() })
             .then(() => {
                 setLoading(false);
             })
-            .catch(e => setLoading(false));
+            .catch(() => setLoading(false));
     };
     const handleAnswerSend = (questionId, answerText) => {
         setLoading(true);
-        database
-            .ref(`/countries/${id}/questions/${questionId}/answers`)
-            .push({ text: answerText, author: user, date: Date.now() })
+        addAnswer(id, questionId, {
+            text: answerText,
+            author: user,
+            date: Date.now(),
+        })
             .then(() => setLoading(false))
-            .catch(e => setLoading(false));
+            .catch(() => setLoading(false));
+    };
+    const handleQuestionDelete = questionId => {
+        deleteQuestion(id, questionId).then(() => {
+            setQuestions(questions.filter(q => q.id !== questionId));
+        });
+    };
+    const handleAnswerDelete = (questionId, answerId) => {
+        deleteAnswer(id, questionId, answerId);
     };
 
     useEffect(() => {
@@ -146,6 +156,21 @@ const CountryInfo = ({ isLoading, country, location, match: { params } }) => {
                                         {...q}
                                         onAnswerAdd={v =>
                                             handleAnswerSend(q.id, v)
+                                        }
+                                        onQuestionDelete={
+                                            isAdmin
+                                                ? () =>
+                                                      handleQuestionDelete(q.id)
+                                                : null
+                                        }
+                                        onAnswerDelete={
+                                            isAdmin
+                                                ? answerId =>
+                                                      handleAnswerDelete(
+                                                          q.id,
+                                                          answerId
+                                                      )
+                                                : null
                                         }
                                     />
                                 ))

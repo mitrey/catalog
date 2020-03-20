@@ -1,8 +1,9 @@
 import React from 'react';
-import './Answer.css';
 import Avatar from '../Avatar';
+import { ReactComponent as TrashIcon } from '../../icons/trash.svg';
+import './Answer.css';
 
-const Answer = ({ date = Date.now(), author, text }) => {
+const Answer = ({ date = Date.now(), author, text, onAnswerDelete }) => {
     const day = new Date(date).getDate();
     const month = new Date(date).getMonth();
     const year = new Date(date).getFullYear();
@@ -27,6 +28,7 @@ const Answer = ({ date = Date.now(), author, text }) => {
                     </div>
                 </div>
                 <div className="answer-text">{text}</div>
+                <TrashIcon className="answer-delete" onClick={onAnswerDelete} />
             </div>
         </div>
     );

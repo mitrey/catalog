@@ -5,15 +5,12 @@
 .question--opened {
     background-color: rgba(0, 0, 0, 0.03);
 }
-.question__title {
+.question__title-line {
     padding: 16px 24px;
     font-weight: 600;
     cursor: pointer;
     display: flex;
     align-items: center;
-}
-.question__title:hover {
-    background: #eee;
 }
 .question--opened .question__list {
     display: block;
@@ -24,6 +21,22 @@
 }
 .question__avatar {
     margin-right: 12px;
+}
+.question__title {
+    flex: 1;
+}
+.question__title span {
+    display: inline-block;
+    color: #3e2a9f;
+    border-bottom: 1px solid #3e2a9f;
+    transition: border-color 0.3s;
+}
+.question__title span:hover {
+    border-color: transparent;
+}
+.question__delete {
+    width: 21px;
+    fill: red;
 }
 
 .answer_input {
