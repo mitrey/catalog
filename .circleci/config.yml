@@ -9,7 +9,3 @@ workflows:
       - docker/publish:
           image: mitrey/$CIRCLECI_PROJECT_REPONAME
           dockerfile: dockerfile
-          filters:
-            branches:
-              only:
-                -master
