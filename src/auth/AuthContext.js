@@ -6,6 +6,7 @@ const AuthContext = createContext({});
 const Provider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(false);
+    const [initializing, setInitializing] = useState(true);
 
     useEffect(() => {
         firebase.auth().onAuthStateChanged(data => {
@@ -18,6 +19,7 @@ const Provider = ({ children }) => {
             } else {
                 setUser(null);
             }
+            setInitializing(false);
         });
     }, []);
 
@@ -54,7 +56,7 @@ const Provider = ({ children }) => {
                 isAdmin: user && user.email === 'yarmakdg@gmail.com',
             }}
         >
-            {children}
+            {initializing ? null : children}
         </AuthContext.Provider>
     );
 };

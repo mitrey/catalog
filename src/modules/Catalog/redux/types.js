@@ -1,0 +1,9 @@
+export const CLEAR_CATALOG = 'catalog/CLEAR_CATALOG';
+
+export const GET_PRODUCTS_LIST__LOADING = 'catalog/GET_PRODUCTS_LIST__LOADING';
+export const GET_PRODUCTS_LIST__SUCCESS = 'catalog/GET_PRODUCTS_LIST__SUCCESS';
+export const GET_PRODUCTS_LIST__FAIL = 'catalog/GET_PRODUCTS_LIST__FAIL';
+
+export const GET_PRODUCT__LOADING = 'catalog/GET_PRODUCT__LOADING';
+export const GET_PRODUCT__SUCCESS = 'catalog/GET_PRODUCT__SUCCESS';
+export const GET_PRODUCT__FAIL = 'catalog/GET_PRODUCT__FAIL';

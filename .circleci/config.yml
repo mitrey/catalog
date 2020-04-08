@@ -1,0 +1,16 @@
+version: 2.1
+
+orbs:
+  docker: circleci/docker@1.0.1
+
+workflows:
+  version: 2
+  build_deploy:
+    jobs:
+      - docker/publish:
+          image: mitrey/$CIRCLECI_PROJECT_REPONAME
+          dockerfile: dockerfile
+          filters:
+            branches:
+              only:
+                -master

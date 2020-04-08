@@ -2,10 +2,10 @@ import React, { useEffect } from 'react';
 import Helmet from 'react-helmet';
 import { connect } from 'react-redux';
 
-import Routes from './Routes';
+import Router from './Router';
 import { Provider as AuthProvider } from './auth/AuthContext';
 import './App.css';
-import * as operations from './redux/operations';
+import * as operations from './modules/Home/redux/operations';
 
 function App({ loadCountries }) {
     useEffect(() => {
@@ -21,7 +21,7 @@ function App({ loadCountries }) {
                 />
             </Helmet>
             <AuthProvider>
-                <Routes />
+                <Router />
             </AuthProvider>
         </div>
     );

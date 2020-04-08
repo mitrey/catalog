@@ -1,0 +1,12 @@
+.product-card {
+    box-shadow: 0 0 10px #ccc;
+    padding: 30px;
+}
+.product-card__title {
+    font-size: 18px;
+    font-weight: 600;
+}
+.product-card__price {
+    font-size: 14px;
+    color: #333;
+}
