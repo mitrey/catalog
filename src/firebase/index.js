@@ -3,7 +3,6 @@ import 'firebase/auth';
 import 'firebase/database';
 
 const config = {
-    apiKey: 'AIzaSyCeEPZe_KPjnJMLfU4d5w6sJB_ipsyK884',
     authDomain: 'stucked-with-covid.firebaseapp.com',
     databaseURL: 'https://stucked-with-covid.firebaseio.com',
     projectId: 'stucked-with-covid',

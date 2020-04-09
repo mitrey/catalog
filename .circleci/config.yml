@@ -1,11 +1,12 @@
 version: 2.1
 
-orbs:
-  docker: circleci/docker@1.0.1
+josb:
+  build:
+    docker:
+        - image: circleci/node:12.9.1-browsers
+    working_directory: ~/repo
 
-workflows:
-  build_deploy:
-    jobs:
-      - docker/publish:
-          image: mitrey/$CIRCLECI_PROJECT_REPONAME
-          dockerfile: dockerfile
+steps:
+  - checkout
+  - run pwd
+  - run ls
